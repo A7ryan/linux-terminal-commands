@@ -1,0 +1,163 @@
+Linux Terminal Essentials:
+
+
+1. Check in which folder you are working in Terminal
+Full Form: Present Working Directory
+Command:
+	pwd
+Output:
+	/home/user_name/Desktop
+
+
+2. Create folder in Terminal
+Full Form: Make Directory
+Command:
+	mkdir folder_name
+Example:
+	mkdir myFolder
+
+
+3. Move to other working path in Terminal
+Full Form: Change Directory
+Command:
+	cd folder_name
+Example:
+	cd myFolder
+
+
+4. Move 1 folder back in Terminal
+Eg.
+     Desktop
+         |
+          -- myFolder
+
+Your current working directory in Terminal is myFolder
+eg. pwd -> output -> /home/user_name/Desktop/myFolder
+
+Now you want to go Desktop (1 step previous)
+Command:
+	cd ..
+
+Now your pwd will show output: /home/user_name/Desktop
+
+Assignment (Try below commands):	
+	cd ..
+	pwd
+
+
+5. Create any .file using NANO command
+What nano does:
+	1. create file if does not exists
+	2. opens file in edit mode if it exists
+
+Syntax:
+	nano file_name.entension
+E.g:
+	nano index.html
+	nano test.txt
+	nano main.java
+
+NOTE: Follow below steps to create test.txt file
+Command:
+	1. nano test.txt
+	//write anything inside file
+
+	2. press-> ctrl+o (to save)
+
+	3. press-> ctrl+x (to exit)
+
+Exercise: create index.html using nano and just add hello world in that file
+
+
+
+6. Delete any File using Terminal
+Note: this command is only used to delete any file.
+      You cannot use this to delete folder
+
+Full Form: remove
+Syntax:
+	rm file_name
+
+NOTE: if you get error: not enough permission/unauthorized then use
+
+	sudo rm file_name
+
+NOTE: Make sure in industry be careful while using sudo  command
+
+Example:
+	rm test.txt
+
+
+7. List files +(subfolders) present in current folder
+Command:
+	ls
+
+Example:
+	myFolder
+           |
+            -- index.html
+            -- style.css
+
+NOTE: Suppose you are in myFolder and you want to check how many files are present in it (it will also show subfolders)
+
+Exercise:
+	// check if you are in myFolder dir
+	1. pwd
+
+	2. ls
+	// you will see output as index.html and style.css
+	
+
+
+8. Check (.all_extension) file using Terminal
+Command:
+	ls -a
+
+Output:
+	.bash_history
+	.profile
+
+	etc
+
+NOTE: ls vs ls -a
+
+	1. ls will only display folders and file created
+
+	2. ls -a will show everything including .extensions file
+
+
+Example:
+	Command:
+		1. cd ~
+
+		2. ls
+		// output: Documents Downloads Desktop etc..
+
+		3. ls -a
+		// output: same as ls output + (.bash_history .cache .profile)
+
+		// All extension files are seen
+		
+
+9. Delete a folder (which maybe empty or non-empty folder)
+Syntax: rm -r folder_name
+Understanding:
+	rm -> remove
+	-r -> recursive (recursively)
+	
+// It means delete the folder and everything inside it
+// (Complete Folder Deletion)
+
+Example:
+	1. rm -r myFolder
+
+		or
+
+	1. sudo rm -r myFolder
+
+
+
+10. Clear the Terminal
+Command:
+	clear
+
